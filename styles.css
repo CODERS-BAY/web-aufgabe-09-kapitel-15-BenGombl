@@ -1,0 +1,163 @@
+body{
+    max-width: 95%;
+    margin: auto;
+}
+
+h1{
+    background-color: beige;
+    box-shadow: 0 0 1rem #000000ff;
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+
+main.grid{
+    width: 90%;
+   
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    
+    grid-auto-flow: dense;
+    
+}
+
+
+
+main a{
+    display: block;
+    margin: 0.5rem;
+
+    background-color: aqua;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 0 0.3rem #555;
+    opacity: 0.8;
+
+    text-decoration: none;
+}
+main a:hover{
+    margin: 0;
+    box-shadow: 0 0 0.6rem black;
+    transition: all 0.2s;
+    opacity: 1;
+    
+}
+
+main a:hover h2{
+    background-color: #ffffff50;
+    
+}
+
+
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 0.3rem white;
+    
+    
+    position: relative;
+    top: 50%;
+    transform: translate(0, -100%);
+    background-color: beige;
+    transition: all 1s;
+
+}
+
+
+
+#linz{
+    background-image: url("img/linz.jpg");
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#oslo{
+    background-image: url("img/oslo.jpg");
+    grid-column: span 2;
+    grid-row: span 2;
+}
+#london{
+    background-image: url("img/london.jpg");
+    grid-column: span 2;
+    grid-row: span 1;
+}
+#stPetersburg{
+   
+    background-image: url("img/st_petersburg.jpeg");
+    grid-column: span 1;
+    grid-row: span 3;
+    
+}
+#uppsala{
+    background-image: url("img/uppsala.jpg");
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+#warschau{
+    background-image: url("img/warschau.jpg");
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+#montreal{
+    background-image: url("img/montreal.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+nav{
+    
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+nav a{
+    font-size: 2rem;
+    
+    text-decoration: none;
+    transition: all 0.5s;
+    color: #454545;
+    
+}
+
+nav a:hover{
+    text-shadow: 0 0 0.1rem black;
+    border-top: 1px solid lightslategray;
+    border-bottom: 1px solid lightslategray;
+}
+
+nav a.current{
+    border-top: 3px solid lightslategray;
+    border-bottom: 3px solid lightslategray;
+}
+
+
+@media screen and (min-width: 1660px){
+    main.grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 300px;
+    }
+}
+
+@media screen and (max-width: 1160px){
+    main.grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 910px){
+    main.grid{
+        display: block;
+    }
+    div{
+        height: 15rem;
+    }
+}
