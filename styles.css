@@ -115,8 +115,9 @@ main article p {
 section img {
     max-height: 30rem;
     height: 44rem;
+    max-width: 95vw;
     display: block;
-    margin: 1rem;
+    margin: 1.5rem;
     opacity: 0.85;
     transition: all 0.1s;
     border-radius: 0.5rem;
@@ -126,7 +127,7 @@ section img {
 section img:hover {
     opacity: 1;
     max-height: 31rem;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
     box-shadow: 0 0 0.8rem #000;
 }
 
@@ -294,5 +295,10 @@ nav a.current {
 
     nav{
         padding: 1rem 0;
+    }
+
+    section img{
+        height: auto;
+        max-height: none;
     }
 }
